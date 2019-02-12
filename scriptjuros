@@ -1,0 +1,21 @@
+import math
+print("Script Juros Simples/Compostos")
+print("""1-Juros Simples (J = C.i.t)
+2-Juros Compostos (M = C.(1+i)^t) """)
+es1 = str(input("Qual tipo de juros (1/2): "))
+print("Medidas de tempo: Anos ou Meses")
+t1sp = str(input("Medida da Taxa e do Tempo: "))
+if es1 == "1":
+    c1 = float(input("Valor do Capital: "))
+    i1 = float(input("Valor da Taxa (em decimal): "))
+    t1 = float(input("Quantidade de {}:".format(t1sp)))
+    cnt1 = c1*i1*t1
+    print("O Juros será de: {:.3f} ao '{}'".format(cnt1, t1sp))
+elif es1 == "2":
+    c1 = float(input("Valor do Capital: "))
+    i1 = float(input("Valor da Taxa (em decimal): "))
+    t1 = float(input("Quantidade de {}:".format(t1sp)))
+    cnt2 = c1 * ((1 + i1)**t1)
+    print("O Montante será de:{:.4f}".format(cnt2))
+else:
+    print("Erro! Por favor, refaça a operação.")
